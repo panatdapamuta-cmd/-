@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Message ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d1117;
+      color: #58a6ff;
+      font-family: monospace;
+    }
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      margin: 30px;
+      animation: heartbeat 1.2s infinite;
+    }
+    .heart::before, .heart::after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: #ff4b6e;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      box-shadow: 0 0 40px #ff4b6e;
+    }
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.3); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.3); }
+      70% { transform: scale(1); }
+    }
+    .code-text { color: #8b949e; font-size: 14px; }
+    .main-text { color: #ffffff; font-size: 18px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="code-text">&lt;script&gt; runHeartbeat(); &lt;/script&gt;</div>
+  <div class="heart"></div>
+  <div class="main-text">System Overload: คิดถึงเธอเกิน 100% ❤️</div>
+</body>
+</html>
